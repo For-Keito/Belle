@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tale As Old As Time - For Keito ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Welcome Screen - Belle's Library Theme -->
+        <div id="welcomeScreen" class="screen active">
+            <div class="enchanted-background"></div>
+            <div class="welcome-content">
+                <div class="library-frame">
+                    <h1>A Tale As Old As Time</h1>
+                    <p>For the girl who loves Belle...</p>
+                    <p class="subtitle">And the girl who loves lilies</p>
+                    <div class="belle-icon">👑</div>
+                    <div class="lily-icon">🌷</div>
+                    <button onclick="startJourney()" class="btn btn-primary">Begin Your Journey</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 1: Belle's Library Quiz -->
+        <div id="game1Screen" class="screen">
+            <div class="game-header">
+                <h2>📚 Belle's Wisdom 📚</h2>
+                <p>Do you remember Belle's famous dream?</p>
+            </div>
+            <div class="quiz-container">
+                <div class="question">
+                    <p>"I want much more than this provincial life..."</p>
+                    <p class="sub-q">Complete Belle's quote:</p>
+                    <div class="choices">
+                        <button class="choice" onclick="checkAnswer1(0)">I want adventure in the great, wide somewhere</button>
+                        <button class="choice" onclick="checkAnswer1(1)">I want to live in a magical castle</button>
+                        <button class="choice" onclick="checkAnswer1(2)">I want to be a princess</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 2: Enchanted Rose Memory Game -->
+        <div id="game2Screen" class="screen">
+            <div class="game-header">
+                <h2>🌹 The Enchanted Rose 🌹</h2>
+                <p>Keep the magic alive by matching the enchanted objects</p>
+            </div>
+            <div class="memory-game">
+                <div id="memoryGrid" class="memory-grid"></div>
+                <button onclick="resetMemory()" class="btn btn-secondary" style="margin-top: 20px;">Reset Game</button>
+            </div>
+        </div>
+
+        <!-- Game 3: Love Letter Assembly -->
+        <div id="game3Screen" class="screen">
+            <div class="game-header">
+                <h2>💕 A Heart's Truth 💕</h2>
+                <p>What does a true courtship look like?</p>
+            </div>
+            <div class="arrangement-game">
+                <div class="target-area">
+                    <p>The ingredients of a sincere heart:</p>
+                    <div id="targetBox" class="target-box"></div>
+                </div>
+                <div class="source-items">
+                    <div class="draggable" draggable="true">Sincerity</div>
+                    <div class="draggable" draggable="true">Consistency</div>
+                    <div class="draggable" draggable="true">Patience</div>
+                </div>
+                <button onclick="nextScreen()" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Continue</button>
+            </div>
+        </div>
+
+        <!-- Final Message Screen -->
+        <div id="messageScreen" class="screen">
+            <button onclick="goBack()" class="back-btn">← Back</button>
+            <div class="message-content">
+                <div class="ballroom-scene">
+                    <div class="enchanted-header">
+                        <h1>A Message From The Heart</h1>
+                        <div class="flower-decoration">🌷 ✨ 🌹 ✨ 🌷</div>
+                    </div>
+                </div>
+                <div class="letter-box">
+                    <div class="letter-text">
+                        <p class="greeting">Hey...</p>
+                        
+                        <p>My heart has been whispering something to me for a while now, and I think it's finally time to tell you.</p>
+                        
+                        <p>I just can't stop thinking about how amazing you are.</p>
+                        
+                        <p>There's something about you that keeps finding its way into my mind, even on ordinary days. You have this quiet effect on me that I can't really explain...….</p>
+                        
+                        <p>And honestly, I don't want to ignore it anymore.</p>
+                        
+                        <p><strong>I think I'm starting to like you, Keito</strong></p>
+
+                        <hr class="divider">
+
+                        <p>If you're reading this, it means I made this little website just for you. Every line of code, every click, and every little detail here was made with you in mind.</p>
+                        
+                        <p>It's my own little way of showing you how much you already mean to me.</p>
+
+                        <p>I just want you to know that <strong>I'd like to pursue you, Keito.</strong></p>
+
+                        <p>Whether there's a chance or not, I'm still here, and I'll still choose to court you. I'm not doing this because I'm waiting for reassurance or because I need to know if I have a chance. I'm doing this because I like you and I want to show you that.</p>
+
+                        <p>For me kasi, courting someone isn't about asking, "May chance ba ako?" or saying, "If you tell me there's no chance, I'll stop." It's about being sincere, showing na you have pure intentions, and being willing to wait even if it takes a long time pa.</p>
+
+                        <p>I'm not here to pressure you into liking me back. I simply want to be consistent and genuine with how I feel.</p>
+                        
+                        <p>And if one day you happen to see me differently and your heart slowly chooses me to, I'd be grateful for that. I just want to be consistent and genuine with how I feel. But until then, I won't rush you.</p>
+
+                        <p>I'll let my actions speak louder than my words, because I believe sincerity is shown by what we consistently do, not just by what we say. I hope that, little by little, you'll see that my intentions are real.</p>
+
+                        <p>For now, allow me to prove to you that my feelings for you are true.</p>
+
+                        <p><strong class="confession">I like you, Keito</strong></p>
+
+                        <p class="signature">— Kai ❤️</p>
+                    </div>
+                </div>
+                <div class="final-flowers">🌷 ✨ 🌹 ✨ 🌷 ✨ 🌹</div>
+                <button onclick="shareMessage()" class="btn btn-primary" style="margin-top: 20px;">Share This Moment ✨</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
